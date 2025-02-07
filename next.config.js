@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-const withContentlayer = require('next-contentlayer2').withContentlayer
+const withContentlayer = require('next-contentlayer').withContentlayer
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -65,6 +65,28 @@ const unoptimized = process.env.UNOPTIMIZED ? true : undefined
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   const nextConfig = {
+    // Add specific Contentlayer config for Vercel
+    experimental: {
+      esmExternals: 'loose', // Required for Contentlayer
+    },
+    // Ensure Contentlayer works in production
+    webpack: (config, { isServer }) => {
+      if (!isServer) {
+        // Don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
+        config.resolve.fallback = {
+          fs: false,
+          path: false,
+        }
+      }
+
+      // Add existing SVG configuration
+      config.module.rules.push({
+        test: /\.svg$/,
+        use: ['@svgr/webpack'],
+      })
+
+      return config
+    },
     output,
     basePath,
     reactStrictMode: true,
@@ -88,14 +110,6 @@ module.exports = () => {
           headers: securityHeaders,
         },
       ]
-    },
-    webpack: (config, options) => {
-      config.module.rules.push({
-        test: /\.svg$/,
-        use: ['@svgr/webpack'],
-      })
-
-      return config
     },
   }
   return plugins.reduce((acc, next) => next(acc), nextConfig)
