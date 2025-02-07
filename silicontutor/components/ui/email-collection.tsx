@@ -14,40 +14,35 @@ export function EmailCollection() {
       const response = await fetch('/api/subscribe', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ email }),
+        body: JSON.stringify({ email })
       })
 
-      if (!response.ok) {
-        const data = await response.json()
-        throw new Error(data.error || 'Failed to subscribe')
-      }
-      
+      if (!response.ok) throw new Error()
       setStatus('success')
       setEmail('')
     } catch (error) {
-      console.error('Subscription error:', error)
       setStatus('error')
     }
   }
 
   return (
-    <section className="bg-gradient-to-b from-gray-50 to-white py-24 dark:from-gray-800 dark:to-gray-900">
-      <div className="mx-auto max-w-2xl px-4 text-center">
-        <h2 className="text-center text-4xl font-light text-gray-900 dark:text-white md:text-5xl">
+    <section className="bg-gradient-to-b from-gray-50 to-white dark:from-gray-800 dark:to-gray-900 py-24">
+      <div className="max-w-2xl mx-auto px-4 text-center">
+        <h2 className="text-4xl md:text-5xl text-center font-light text-gray-900 dark:text-white">
           Join our waitlist
         </h2>
-        <p className="mt-4 text-lg font-light text-gray-600 dark:text-gray-300">
+        <p className="mt-4 text-lg text-gray-600 dark:text-gray-300 font-light">
           Get early access to Silicontutor
         </p>
         
         <form onSubmit={handleSubmit} className="mt-12">
-          <div className="flex justify-center gap-x-4">
+          <div className="flex gap-x-4 justify-center">
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               placeholder="Enter your email"
-              className="min-w-0 flex-auto rounded-md border bg-white px-4 py-2.5 font-light text-gray-900 shadow-sm focus:border-pink-500 focus:ring-2 focus:ring-pink-500 dark:border-gray-600 dark:bg-gray-800 dark:text-white dark:placeholder-gray-400"
+              className="min-w-0 flex-auto rounded-md border border-gray-300 dark:border-gray-600 px-4 py-2.5 text-gray-900 dark:text-white bg-white dark:bg-gray-800 shadow-sm focus:border-pink-500 focus:ring-2 focus:ring-pink-500 font-light dark:placeholder-gray-400"
               required
             />
             <button
@@ -59,14 +54,10 @@ export function EmailCollection() {
             </button>
           </div>
           {status === 'success' && (
-            <p className="mt-4 text-sm font-light text-green-600 dark:text-green-400">
-              Thanks for joining our waitlist!
-            </p>
+            <p className="mt-4 text-sm text-green-600 dark:text-green-400 font-light">Thanks for joining our waitlist!</p>
           )}
           {status === 'error' && (
-            <p className="mt-4 text-sm font-light text-red-600 dark:text-red-400">
-              Something went wrong. Please try again.
-            </p>
+            <p className="mt-4 text-sm text-red-600 dark:text-red-400 font-light">Something went wrong. Please try again.</p>
           )}
         </form>
       </div>
