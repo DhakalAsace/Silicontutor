@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-require-imports */
-const { withContentlayer } = require('next-contentlayer2')
+const withContentlayer = require('next-contentlayer').withContentlayer
 
 const withBundleAnalyzer = require('@next/bundle-analyzer')({
   enabled: process.env.ANALYZE === 'true',
@@ -64,7 +64,7 @@ const unoptimized = process.env.UNOPTIMIZED ? true : undefined
  **/
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
-  return plugins.reduce((acc, next) => next(acc), {
+  const nextConfig = {
     output,
     basePath,
     reactStrictMode: true,
@@ -97,5 +97,6 @@ module.exports = () => {
 
       return config
     },
-  })
+  }
+  return plugins.reduce((acc, next) => next(acc), nextConfig)
 }
