@@ -1,6 +1,9 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
+// Add revalidate time for ISR
+export const revalidate = 60
+
 import { components } from '@/components/MDXComponents'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs, allAuthors } from 'contentlayer/generated'

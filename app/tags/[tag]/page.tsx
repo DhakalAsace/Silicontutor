@@ -7,6 +7,9 @@ import tagData from 'app/tag-data.json'
 import { genPageMetadata } from 'app/seo'
 import { Metadata } from 'next'
 
+// Add revalidate time for ISR
+export const revalidate = 60
+
 const POSTS_PER_PAGE = 5
 
 export async function generateMetadata(props: {
