@@ -9,15 +9,7 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: [
-          '/api/*',
-          '/admin/*',
-          '/_next/*',
-          '/_vercel/*',
-          '/static/images/*',
-          '/*.json',
-          '/*.xml',
-        ],
+        disallow: ['/api/*', '/admin/*', '/_next/*', '/_vercel/*', '/static/images/*', '/*.json'],
       },
       {
         userAgent: 'GPTBot',
