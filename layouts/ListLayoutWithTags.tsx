@@ -9,6 +9,7 @@ import Link from '@/components/Link'
 import Tag from '@/components/Tag'
 import siteMetadata from '@/data/siteMetadata'
 import tagData from 'app/tag-data.json'
+import Image from 'next/image'
 
 interface PaginationProps {
   totalPages: number
@@ -125,34 +126,49 @@ export default function ListLayoutWithTags({
             </div>
           </div>
           <div>
-            <ul>
+            <ul className="grid grid-cols-1 gap-8">
               {displayPosts.map((post) => {
-                const { path, date, title, summary, tags } = post
+                const { path, date, title, summary, tags, images } = post
+                const displayImage =
+                  images && images.length > 0
+                    ? images[0]
+                    : 'https://picsum.photos/seed/picsum/800/400'
                 return (
-                  <li key={path} className="py-5">
-                    <article className="flex flex-col space-y-2 xl:space-y-0">
-                      <dl>
-                        <dt className="sr-only">Published on</dt>
-                        <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
-                          <time dateTime={date} suppressHydrationWarning>
-                            {formatDate(date, siteMetadata.locale)}
-                          </time>
-                        </dd>
-                      </dl>
-                      <div className="space-y-3">
-                        <div>
-                          <h2 className="text-2xl font-bold leading-8 tracking-tight">
-                            <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
-                              {title}
+                  <li
+                    key={path}
+                    className="group relative rounded-lg border border-gray-200 bg-white shadow-md transition-all hover:shadow-lg dark:border-gray-800 dark:bg-gray-800"
+                  >
+                    <article>
+                      <div className="relative aspect-[16/9] w-full overflow-hidden rounded-t-lg">
+                        <Link href={`/${path}`}>
+                          <Image
+                            src={displayImage}
+                            alt={title}
+                            fill
+                            className="object-cover transition-transform duration-200 group-hover:scale-105"
+                          />
+                        </Link>
+                      </div>
+                      <div className="p-6">
+                        <div className="flex flex-wrap gap-2">
+                          {tags?.slice(0, 3).map((tag) => (
+                            <Link
+                              key={tag}
+                              href={`/tags/${slug(tag)}`}
+                              className="text-sm text-primary-500 hover:text-primary-600 dark:hover:text-primary-400"
+                            >
+                              #{tag}
                             </Link>
-                          </h2>
-                          <div className="flex flex-wrap">
-                            {tags?.map((tag) => <Tag key={tag} text={tag} />)}
-                          </div>
+                          ))}
                         </div>
-                        <div className="prose max-w-none text-gray-500 dark:text-gray-400">
+                        <h2 className="mt-4 text-xl font-bold leading-8 tracking-tight">
+                          <Link href={`/${path}`} className="text-gray-900 dark:text-gray-100">
+                            {title}
+                          </Link>
+                        </h2>
+                        <p className="mt-4 line-clamp-3 text-gray-500 dark:text-gray-400">
                           {summary}
-                        </div>
+                        </p>
                       </div>
                     </article>
                   </li>
