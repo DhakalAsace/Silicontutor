@@ -3,15 +3,9 @@ import { fontFamily } from 'tailwindcss/defaultTheme'
 import colors from 'tailwindcss/colors'
 import forms from '@tailwindcss/forms'
 import typography from '@tailwindcss/typography'
-import type { Config } from 'tailwindcss'
-import type { PluginAPI } from 'tailwindcss/types/config'
 
-type Theme = {
-  theme: (path: string) => string
-}
-
-/** @type {import("tailwindcss").Config} */
-const config: Config = {
+/** @type {import('tailwindcss').Config} */
+const config = {
   content: [
     './node_modules/pliny/**/*.js',
     './app/**/*.{js,ts,jsx,tsx}',
@@ -41,7 +35,7 @@ const config: Config = {
         70: '70',
         80: '80',
       },
-      typography: ({ theme }: Theme) => ({
+      typography: (/** @type {{ theme: (path: string) => string | undefined }} */ { theme }) => ({
         DEFAULT: {
           css: {
             color: theme('colors.gray.700'),
@@ -93,22 +87,7 @@ const config: Config = {
       }),
     },
   },
-  plugins: [
-    forms,
-    typography,
-    ({ addBase, theme }: PluginAPI) => {
-      addBase({
-        'a, button': {
-          outlineColor: theme('colors.primary.500'),
-          '&:focus-visible': {
-            outline: '2px solid',
-            borderRadius: theme('borderRadius.DEFAULT'),
-            outlineColor: theme('colors.primary.500'),
-          },
-        },
-      })
-    },
-  ],
+  plugins: [forms, typography],
 }
 
 export default config
