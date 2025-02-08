@@ -1,30 +1,43 @@
 import 'css/prism.css'
 import 'katex/dist/katex.css'
 
-import PageTitle from '@/components/PageTitle'
 import { components } from '@/components/MDXComponents'
-import { MDXLayoutRenderer } from 'pliny/mdx-components'
 import { sortPosts, coreContent, allCoreContent } from 'pliny/utils/contentlayer'
 import { allBlogs, allAuthors } from 'contentlayer/generated'
 import type { Authors, Blog } from 'contentlayer/generated'
-import PostSimple from '@/layouts/PostSimple'
-import PostLayout from '@/layouts/PostLayout'
-import PostBanner from '@/layouts/PostBanner'
+import dynamic from 'next/dynamic'
 import { Metadata } from 'next'
 import siteMetadata from '@/data/siteMetadata'
 import { notFound } from 'next/navigation'
 
-const defaultLayout = 'PostLayout'
+// Import layouts
+const PostSimple = dynamic(() => import('@/layouts/PostSimple'))
+const PostLayout = dynamic(() => import('@/layouts/PostLayout'))
+const PostBanner = dynamic(() => import('@/layouts/PostBanner'))
+
+// Import MDX content renderer with proper client/server boundary
+const MDXContent = dynamic(() => import('./mdx-content'), {
+  ssr: false,
+  loading: () => <div className="mt-10 text-center">Loading content...</div>,
+})
+
 const layouts = {
   PostSimple,
   PostLayout,
   PostBanner,
-}
+} as const
 
-export async function generateMetadata(props: {
-  params: Promise<{ slug: string[] }>
+// Add type for valid layout names
+type LayoutKeys = keyof typeof layouts
+
+// Update defaultLayout to be type-safe
+const defaultLayout: LayoutKeys = 'PostLayout'
+
+export async function generateMetadata({
+  params,
+}: {
+  params: { slug: string[] }
 }): Promise<Metadata | undefined> {
-  const params = await props.params
   const slug = decodeURI(params.slug.join('/'))
   const post = allBlogs.find((p) => p.slug === slug)
   const authorList = post?.authors || ['default']
@@ -74,15 +87,17 @@ export async function generateMetadata(props: {
 }
 
 export const generateStaticParams = async () => {
-  return allBlogs.map((p) => ({ slug: p.slug.split('/').map((name) => decodeURI(name)) }))
+  const posts = allBlogs.map((p) => ({
+    slug: p.slug.split('/').map((s) => decodeURI(s)),
+  }))
+  return posts
 }
 
-export default async function Page(props: { params: Promise<{ slug: string[] }> }) {
-  const params = await props.params
+export default async function Page({ params }: { params: { slug: string[] } }) {
   const slug = decodeURI(params.slug.join('/'))
-  // Filter out drafts in production
   const sortedCoreContents = allCoreContent(sortPosts(allBlogs))
   const postIndex = sortedCoreContents.findIndex((p) => p.slug === slug)
+
   if (postIndex === -1) {
     return notFound()
   }
@@ -97,14 +112,14 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
   })
   const mainContent = coreContent(post)
   const jsonLd = post.structuredData
-  jsonLd['author'] = authorDetails.map((author) => {
-    return {
-      '@type': 'Person',
-      name: author.name,
-    }
-  })
+  jsonLd['author'] = authorDetails.map((author) => ({
+    '@type': 'Person',
+    name: author.name,
+  }))
 
-  const Layout = layouts[post.layout || defaultLayout]
+  // Make layout selection type-safe
+  const layoutName = (post.layout || defaultLayout) as LayoutKeys
+  const Layout = layouts[layoutName]
 
   return (
     <>
@@ -113,7 +128,7 @@ export default async function Page(props: { params: Promise<{ slug: string[] }> 
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Layout content={mainContent} authorDetails={authorDetails} next={next} prev={prev}>
-        <MDXLayoutRenderer code={post.body.code} components={components} toc={post.toc} />
+        <MDXContent code={post.body.code} components={components} toc={post.toc} />
       </Layout>
     </>
   )

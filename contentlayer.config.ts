@@ -1,4 +1,4 @@
-import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer2/source-files'
+import { defineDocumentType, ComputedFields, makeSource } from 'contentlayer/source-files'
 import { writeFileSync } from 'fs'
 import readingTime from 'reading-time'
 import { slug } from 'github-slugger'
@@ -25,6 +25,7 @@ import rehypePresetMinify from 'rehype-preset-minify'
 import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 import prettier from 'prettier'
+import type { Pluggable } from 'unified'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -59,10 +60,31 @@ const computedFields: ComputedFields = {
   toc: { type: 'json', resolve: (doc) => extractTocHeadings(doc.body.raw) },
 }
 
+// Define minimum required fields for our document type
+interface ContentlayerDocument {
+  _id: string
+  _raw: {
+    sourceFilePath: string
+    sourceFileName: string
+    sourceFileDir: string
+    contentType: string
+    flattenedPath: string
+  }
+  type: string
+  tags?: string[]
+  draft?: boolean
+  title: string
+  date: string
+  body: {
+    raw: string
+    code: string
+  }
+}
+
 /**
  * Count the occurrences of all tags across blog posts and write to json file
  */
-async function createTagCount(allBlogs) {
+async function createTagCount(allBlogs: ContentlayerDocument[]) {
   const tagCount: Record<string, number> = {}
   allBlogs.forEach((file) => {
     if (file.tags && (!isProduction || file.draft !== true)) {
@@ -80,7 +102,7 @@ async function createTagCount(allBlogs) {
   writeFileSync('./app/tag-data.json', formatted)
 }
 
-function createSearchIndex(allBlogs) {
+function createSearchIndex(allBlogs: ContentlayerDocument[]) {
   if (
     siteMetadata?.search?.provider === 'kbar' &&
     siteMetadata.search.kbarConfig.searchDocumentsPath
@@ -147,9 +169,11 @@ export const Authors = defineDocumentType(() => ({
   computedFields,
 }))
 
-export default makeSource({
+// Note: We use type assertions here because contentlayer's type definitions
+// have some incompatibilities with the unified ecosystem
+const source = makeSource({
   contentDirPath: 'data',
-  documentTypes: [Blog, Authors],
+  documentTypes: { Blog, Authors },
   mdx: {
     cwd: process.cwd(),
     remarkPlugins: [
@@ -159,14 +183,13 @@ export default makeSource({
       remarkMath,
       remarkImgToJsx,
       remarkAlert,
-    ],
+    ] as Pluggable[],
     rehypePlugins: [
       rehypeSlug,
       [
         rehypeAutolinkHeadings,
         {
-          behavior: 'prepend',
-          headingProperties: {
+          properties: {
             className: ['content-header'],
           },
           content: icon,
@@ -177,11 +200,23 @@ export default makeSource({
       [rehypeCitation, { path: path.join(root, 'data') }],
       [rehypePrismPlus, { defaultLanguage: 'js', ignoreMissing: true }],
       rehypePresetMinify,
-    ],
-  },
-  onSuccess: async (importData) => {
-    const { allBlogs } = await importData()
-    createTagCount(allBlogs)
-    createSearchIndex(allBlogs)
+    ] as Pluggable[],
   },
 })
+
+// Add onSuccess handler after source creation
+if (source && typeof source === 'object') {
+  const typedSource = source as {
+    onSuccess: (
+      importData: () => Promise<{ allDocuments: ContentlayerDocument[] }>
+    ) => Promise<void>
+  }
+  typedSource.onSuccess = async (importData) => {
+    const { allDocuments } = await importData()
+    const allBlogs = allDocuments.filter((doc) => doc._raw.sourceFilePath.startsWith('blog/'))
+    await createTagCount(allBlogs)
+    createSearchIndex(allBlogs)
+  }
+}
+
+export default source
