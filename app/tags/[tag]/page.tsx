@@ -22,9 +22,11 @@ export async function generateMetadata(props: {
     description: `${siteMetadata.title} ${tag} tagged content`,
     alternates: {
       canonical: './',
-      types: {
-        'application/rss+xml': `${siteMetadata.siteUrl}/tags/${tag}/feed.xml`,
-      },
+    },
+    // Move RSS feed to a separate feed generation
+    feed: {
+      url: `${siteMetadata.siteUrl}/tags/${tag}/feed.xml`,
+      type: 'application/rss+xml',
     },
   })
 }

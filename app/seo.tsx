@@ -10,6 +10,10 @@ interface PageSEOProps {
     canonical?: string
     languages?: Record<string, string>
   }
+  feed?: {
+    url: string
+    type: string
+  }
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any
 }
@@ -20,6 +24,7 @@ export function genPageMetadata({
   image,
   keywords,
   alternates,
+  feed,
   ...rest
 }: PageSEOProps): Metadata {
   const metaDescription = description || siteMetadata.description
@@ -88,6 +93,14 @@ export function genPageMetadata({
       // @ts-expect-error Bing isn't in Next's Verification type
       bing: process.env.NEXT_PUBLIC_BING_SITE_VERIFICATION,
     },
+    ...(feed && {
+      alternates: {
+        ...alternates,
+        types: {
+          'application/rss+xml': feed.url,
+        },
+      },
+    }),
     ...rest,
   }
 }
