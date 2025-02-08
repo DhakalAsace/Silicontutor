@@ -9,7 +9,7 @@ const siteMetadata = {
   theme: 'system', // system, dark or light
   siteUrl: 'https://www.silicontutor.com', // **REPLACE WITH YOUR ACTUAL DOMAIN** // **REPLACE WITH YOUR REPO (or remove if not applicable)**
   siteLogo: '/static/images/logo.png', // Update this path
-  socialBanner: `${process.env.BASE_PATH || ''}/static/images/twitter-card.png`, // Keep, ensure path
+  socialBanner: '/static/images/twitter-card.png', // Remove process.env.BASE_PATH
   mastodon: '', // Add if you have a Mastodon account
   //email: 'contact@silicontutor.com', // **REPLACE WITH YOUR ACTUAL EMAIL**
   //github: 'https://github.com/your-github-profile', // **REPLACE WITH YOUR GITHUB (or remove)**
