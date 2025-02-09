@@ -59,27 +59,45 @@ const output = process.env.EXPORT ? 'export' : undefined
 const basePath = process.env.BASE_PATH || undefined
 const unoptimized = process.env.UNOPTIMIZED ? true : undefined
 
-/**
- * @type {import('next/dist/next-server/server/config').NextConfig}
- **/
+/** @type {import('next').NextConfig} */
 module.exports = () => {
   const plugins = [withContentlayer, withBundleAnalyzer]
   const nextConfig = {
-    // Add specific Contentlayer config for Vercel
     experimental: {
-      esmExternals: 'loose', // Required for Contentlayer
+      optimizeCss: true,
+      optimizeServerReact: true,
+      optimizePackageImports: ['framer-motion', '@headlessui/react'],
+      swcMinify: true,
     },
-    // Ensure Contentlayer works in production
-    webpack: (config, { isServer }) => {
+    swcMinify: true,
+    compiler: {
+      styledComponents: false,
+      removeConsole: process.env.NODE_ENV === 'production',
+    },
+    webpack: (config, { dev, isServer }) => {
       if (!isServer) {
-        // Don't resolve 'fs' module on the client to prevent this error on build --> Error: Can't resolve 'fs'
         config.resolve.fallback = {
           fs: false,
           path: false,
         }
+
+        config.optimization = {
+          ...config.optimization,
+          splitChunks: {
+            ...config.optimization.splitChunks,
+            cacheGroups: {
+              ...config.optimization.splitChunks.cacheGroups,
+              styles: {
+                name: 'styles',
+                type: 'css/mini-extract',
+                chunks: 'all',
+                enforce: true,
+              },
+            },
+          },
+        }
       }
 
-      // Add existing SVG configuration
       config.module.rules.push({
         test: /\.svg$/,
         use: ['@svgr/webpack'],
@@ -102,15 +120,55 @@ module.exports = () => {
         },
       ],
       unoptimized,
+      minimumCacheTTL: 31536000,
+      formats: ['image/webp', 'image/avif'],
     },
     async headers() {
       return [
         {
-          source: '/(.*)',
-          headers: securityHeaders,
+          source: '/:all*(css)',
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'public, max-age=31536000, immutable',
+            },
+            {
+              key: 'Link',
+              value: '</styles.css>; rel=preload; as=style',
+            },
+          ],
+        },
+        {
+          source: '/:all*(svg|jpg|png|js|css|woff|woff2|ttf|eot)',
+          locale: false,
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'public, max-age=31536000, immutable',
+            },
+          ],
+        },
+        {
+          source: '/speed-insights/script.js',
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'public, max-age=31536000, immutable',
+            },
+          ],
+        },
+        {
+          source: '/:path*',
+          headers: [
+            {
+              key: 'Cache-Control',
+              value: 'public, max-age=3600, must-revalidate',
+            },
+          ],
         },
       ]
     },
+    compress: true,
   }
   return plugins.reduce((acc, next) => next(acc), nextConfig)
 }

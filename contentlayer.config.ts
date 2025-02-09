@@ -26,6 +26,7 @@ import siteMetadata from './data/siteMetadata'
 import { allCoreContent, sortPosts } from 'pliny/utils/contentlayer.js'
 import prettier from 'prettier'
 import type { Pluggable } from 'unified'
+import { existsSync, mkdirSync } from 'fs'
 
 const root = process.cwd()
 const isProduction = process.env.NODE_ENV === 'production'
@@ -107,11 +108,22 @@ function createSearchIndex(allBlogs: ContentlayerDocument[]) {
     siteMetadata?.search?.provider === 'kbar' &&
     siteMetadata.search.kbarConfig.searchDocumentsPath
   ) {
-    writeFileSync(
-      `public/${path.basename(siteMetadata.search.kbarConfig.searchDocumentsPath)}`,
-      JSON.stringify(allCoreContent(sortPosts(allBlogs)))
+    const searchIndexPath = path.join(
+      process.cwd(),
+      'public',
+      siteMetadata.search.kbarConfig.searchDocumentsPath.replace(/^\//, '')
     )
-    console.log('Local search index generated...')
+    
+    // Ensure the directory exists
+    const dir = path.dirname(searchIndexPath)
+    if (!existsSync(dir)) {
+      mkdirSync(dir, { recursive: true })
+    }
+
+    // Generate search index with core content
+    const searchData = allCoreContent(sortPosts(allBlogs))
+    writeFileSync(searchIndexPath, JSON.stringify(searchData))
+    console.log('Local search index generated at:', searchIndexPath)
   }
 }
 

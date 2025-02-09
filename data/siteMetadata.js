@@ -64,7 +64,7 @@ const siteMetadata = {
   search: {
     provider: 'kbar', // kbar or algolia
     kbarConfig: {
-      searchDocumentsPath: `${process.env.BASE_PATH || ''}/search.json`, // path to load documents
+      searchDocumentsPath: '/search.json', // path to load documents
     },
     // algoliaConfig: { // Only if using Algolia - configure correctly
     //   appId: 'YOUR_ALGOLIA_APP_ID',

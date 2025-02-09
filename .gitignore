@@ -37,9 +37,6 @@ next-env.d.ts
 # rss feed
 /public/feed.xml
 
-# search
-/public/search.json
-
 # vercel
 .vercel
 
