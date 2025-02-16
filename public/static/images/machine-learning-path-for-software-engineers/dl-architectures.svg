@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Key Deep Learning Architectures</text>
+  
+  <!-- CNN Section -->
+  <g transform="translate(150,150)">
+    <text x="0" y="-60" font-size="16" font-weight="bold">CNN</text>
+    <!-- Input Image -->
+    <rect x="0" y="0" width="40" height="40" fill="#ff9999" stroke="#000"/>
+    <!-- Convolution Layers -->
+    <rect x="60" y="5" width="30" height="30" fill="#99ff99" stroke="#000"/>
+    <rect x="110" y="10" width="20" height="20" fill="#99ff99" stroke="#000"/>
+    <!-- Fully Connected -->
+    <circle cx="160" cy="20" r="10" fill="#9999ff" stroke="#000"/>
+    <!-- Arrows -->
+    <path d="M40,20 L60,20" stroke="#000" marker-end="url(#arrow)"/>
+    <path d="M90,20 L110,20" stroke="#000" marker-end="url(#arrow)"/>
+    <path d="M130,20 L150,20" stroke="#000" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- RNN Section -->
+  <g transform="translate(400,150)">
+    <text x="0" y="-60" font-size="16" font-weight="bold">RNN</text>
+    <!-- RNN Cell -->
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#ffcc99" stroke="#000"/>
+    <!-- Recurrent Arrow -->
+    <path d="M40,10 C60,10 60,30 40,30" stroke="#000" fill="none" marker-end="url(#arrow)"/>
+    <!-- Sequential Input -->
+    <line x1="-30" y1="20" x2="0" y2="20" stroke="#000" marker-end="url(#arrow)"/>
+    <line x1="40" y1="20" x2="70" y2="20" stroke="#000" marker-end="url(#arrow)"/>
+  </g>
+  
+  <!-- Transformer Section -->
+  <g transform="translate(650,150)">
+    <text x="0" y="-60" font-size="16" font-weight="bold">Transformer</text>
+    <!-- Multi-head Attention -->
+    <rect x="0" y="0" width="40" height="40" fill="#cc99ff" stroke="#000"/>
+    <!-- Feed Forward -->
+    <rect x="0" y="60" width="40" height="20" fill="#99ccff" stroke="#000"/>
+    <!-- Connections -->
+    <path d="M20,40 L20,60" stroke="#000" marker-end="url(#arrow)"/>
+    <!-- Add & Norm -->
+    <line x1="-10" y1="20" x2="0" y2="20" stroke="#000" stroke-dasharray="2,2"/>
+    <line x1="-10" y1="70" x2="0" y2="70" stroke="#000" stroke-dasharray="2,2"/>
+  </g>
+  
+  <!-- Arrow Marker Definition -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#000"/>
+    </marker>
+  </defs>
+  
+  <!-- Labels -->
+  <text x="150" y="250" text-anchor="middle" font-size="14">Image Processing</text>
+  <text x="400" y="250" text-anchor="middle" font-size="14">Sequential Data</text>
+  <text x="650" y="250" text-anchor="middle" font-size="14">Natural Language</text>
+</svg>

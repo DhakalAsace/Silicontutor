@@ -1,0 +1,38 @@
+<svg viewBox="0 0 800 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="200" fill="#f8f9fa"/>
+  
+  <!-- Timeline -->
+  <line x1="50" y1="100" x2="750" y2="100" stroke="#333" stroke-width="2"/>
+  
+  <!-- Stages -->
+  <g>
+    <!-- Stage 1 -->
+    <circle cx="100" cy="100" r="10" fill="#4CAF50"/>
+    <text x="100" y="140" text-anchor="middle" font-size="12">Foundations</text>
+    <text x="100" y="155" text-anchor="middle" font-size="10">Months 0-3</text>
+    
+    <!-- Stage 2 -->
+    <circle cx="250" cy="100" r="10" fill="#2196F3"/>
+    <text x="250" y="140" text-anchor="middle" font-size="12">Data Analysis</text>
+    <text x="250" y="155" text-anchor="middle" font-size="10">Months 3-6</text>
+    
+    <!-- Stage 3 -->
+    <circle cx="400" cy="100" r="10" fill="#9C27B0"/>
+    <text x="400" y="140" text-anchor="middle" font-size="12">Machine Learning</text>
+    <text x="400" y="155" text-anchor="middle" font-size="10">Months 6-12</text>
+    
+    <!-- Stage 4 -->
+    <circle cx="550" cy="100" r="10" fill="#FF5722"/>
+    <text x="550" y="140" text-anchor="middle" font-size="12">Deep Learning</text>
+    <text x="550" y="155" text-anchor="middle" font-size="10">Months 12-18</text>
+    
+    <!-- Stage 5 -->
+    <circle cx="700" cy="100" r="10" fill="#795548"/>
+    <text x="700" y="140" text-anchor="middle" font-size="12">Specialization</text>
+    <text x="700" y="155" text-anchor="middle" font-size="10">Months 18+</text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="40" text-anchor="middle" font-size="20" font-weight="bold">Data Science Learning Journey</text>
+</svg>

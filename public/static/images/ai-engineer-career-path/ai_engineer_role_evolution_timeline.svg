@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Timeline Line -->
+  <line x1="100" y1="200" x2="700" y2="200" stroke="#2c3e50" stroke-width="4"/>
+  
+  <!-- Timeline Nodes -->
+  <circle cx="200" cy="200" r="12" fill="#3498db"/>
+  <circle cx="400" cy="200" r="12" fill="#2ecc71"/>
+  <circle cx="600" cy="200" r="12" fill="#9b59b6"/>
+  
+  <!-- Past Era -->
+  <g transform="translate(200,200)">
+    <text text-anchor="middle" font-family="Arial, sans-serif">
+      <tspan x="0" y="-60" fill="#3498db" font-size="18" font-weight="bold">2010-2015</tspan>
+      <tspan x="0" y="-35" fill="#34495e" font-size="16">Early AI Development</tspan>
+      <tspan x="0" y="-15" fill="#7f8c8d" font-size="14">Machine Learning Focus</tspan>
+    </text>
+  </g>
+  
+  <!-- Present Era -->
+  <g transform="translate(400,200)">
+    <text text-anchor="middle" font-family="Arial, sans-serif">
+      <tspan x="0" y="-60" fill="#2ecc71" font-size="18" font-weight="bold">2015-2023</tspan>
+      <tspan x="0" y="-35" fill="#34495e" font-size="16">Deep Learning Era</tspan>
+      <tspan x="0" y="-15" fill="#7f8c8d" font-size="14">Neural Networks &amp; Big Data</tspan>
+    </text>
+  </g>
+  
+  <!-- Future Era -->
+  <g transform="translate(600,200)">
+    <text text-anchor="middle" font-family="Arial, sans-serif">
+      <tspan x="0" y="-60" fill="#9b59b6" font-size="18" font-weight="bold">2023+</tspan>
+      <tspan x="0" y="-35" fill="#34495e" font-size="16">AGI &amp; Beyond</tspan>
+      <tspan x="0" y="-15" fill="#7f8c8d" font-size="14">Quantum &amp; Neural Engineering</tspan>
+    </text>
+  </g>
+  
+  <!-- Role Evolution Labels -->
+  <g transform="translate(200,200)">
+    <text text-anchor="middle" font-family="Arial, sans-serif">
+      <tspan x="0" y="45" fill="#34495e" font-size="14">ML Engineer</tspan>
+    </text>
+  </g>
+  
+  <g transform="translate(400,200)">
+    <text text-anchor="middle" font-family="Arial, sans-serif">
+      <tspan x="0" y="45" fill="#34495e" font-size="14">AI/ML Engineer</tspan>
+    </text>
+  </g>
+  
+  <g transform="translate(600,200)">
+    <text text-anchor="middle" font-family="Arial, sans-serif">
+      <tspan x="0" y="45" fill="#34495e" font-size="14">Neural Systems Engineer</tspan>
+    </text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#2c3e50">
+    AI Engineer Role Evolution
+  </text>
+</svg>

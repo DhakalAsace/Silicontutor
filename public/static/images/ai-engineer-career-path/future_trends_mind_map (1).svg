@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Central Hub -->
+  <circle cx="400" cy="300" r="80" fill="#4a90e2"/>
+  <text x="400" y="300" text-anchor="middle" fill="white" font-family="Arial" font-size="16" font-weight="bold">
+    <tspan x="400" dy="0">Future</tspan>
+    <tspan x="400" dy="20">Trends</tspan>
+  </text>
+
+  <!-- AI Engineering Branch -->
+  <path d="M460 250 L600 150" stroke="#2ecc71" stroke-width="3" fill="none"/>
+  <circle cx="600" cy="150" r="50" fill="#2ecc71"/>
+  <text x="600" y="150" text-anchor="middle" fill="white" font-family="Arial" font-size="14">
+    <tspan x="600" dy="-5">AI</tspan>
+    <tspan x="600" dy="20">Engineering</tspan>
+  </text>
+
+  <!-- Sustainability Branch -->
+  <path d="M460 350 L600 450" stroke="#e74c3c" stroke-width="3" fill="none"/>
+  <circle cx="600" cy="450" r="50" fill="#e74c3c"/>
+  <text x="600" y="450" text-anchor="middle" fill="white" font-family="Arial" font-size="14">
+    <tspan x="600" dy="-5">Green</tspan>
+    <tspan x="600" dy="20">Technology</tspan>
+  </text>
+
+  <!-- Emerging Tech Branch -->
+  <path d="M340 250 L200 150" stroke="#f1c40f" stroke-width="3" fill="none"/>
+  <circle cx="200" cy="150" r="50" fill="#f1c40f"/>
+  <text x="200" y="150" text-anchor="middle" fill="white" font-family="Arial" font-size="14">
+    <tspan x="200" dy="-5">Emerging</tspan>
+    <tspan x="200" dy="20">Tech</tspan>
+  </text>
+
+  <!-- Job Market Branch -->
+  <path d="M340 350 L200 450" stroke="#9b59b6" stroke-width="3" fill="none"/>
+  <circle cx="200" cy="450" r="50" fill="#9b59b6"/>
+  <text x="200" y="450" text-anchor="middle" fill="white" font-family="Arial" font-size="14">
+    <tspan x="200" dy="-5">Job</tspan>
+    <tspan x="200" dy="20">Market</tspan>
+  </text>
+
+  <!-- Connecting Lines -->
+  <path d="M235 185 L565 185" stroke="#eee" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+  <path d="M235 415 L565 415" stroke="#eee" stroke-width="2" stroke-dasharray="5,5" fill="none"/>
+</svg>

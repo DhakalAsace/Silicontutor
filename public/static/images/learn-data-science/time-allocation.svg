@@ -1,0 +1,30 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">Weekly Time Allocation (10-15 Hours)</text>
+  
+  <!-- Time Blocks -->
+  <g transform="translate(100, 100)">
+    <!-- Theory -->
+    <rect width="150" height="200" fill="#60a5fa" opacity="0.9"/>
+    <text x="75" y="230" text-anchor="middle" fill="#1e293b" font-size="14">Theory</text>
+    <text x="75" y="250" text-anchor="middle" fill="#1e293b" font-size="14">4-5 Hours</text>
+    
+    <!-- Practice -->
+    <rect x="200" width="150" height="200" fill="#818cf8" opacity="0.9"/>
+    <text x="275" y="230" text-anchor="middle" fill="#1e293b" font-size="14">Practice</text>
+    <text x="275" y="250" text-anchor="middle" fill="#1e293b" font-size="14">3-4 Hours</text>
+    
+    <!-- Projects -->
+    <rect x="400" width="150" height="200" fill="#6366f1" opacity="0.9"/>
+    <text x="475" y="230" text-anchor="middle" fill="#1e293b" font-size="14">Projects</text>
+    <text x="475" y="250" text-anchor="middle" fill="#1e293b" font-size="14">2-3 Hours</text>
+    
+    <!-- Community -->
+    <rect x="600" width="150" height="200" fill="#4f46e5" opacity="0.9"/>
+    <text x="675" y="230" text-anchor="middle" fill="#1e293b" font-size="14">Community</text>
+    <text x="675" y="250" text-anchor="middle" fill="#1e293b" font-size="14">1-2 Hours</text>
+  </g>
+</svg>

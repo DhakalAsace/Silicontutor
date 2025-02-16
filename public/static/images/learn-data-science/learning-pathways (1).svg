@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">Data Science Learning Pathways</text>
+  
+  <!-- Formal Education Path -->
+  <g transform="translate(100, 100)">
+    <rect width="140" height="200" rx="10" fill="#60a5fa" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Formal Education</text>
+    <text x="70" y="80" text-anchor="middle" fill="white" font-size="12">Bachelor's</text>
+    <text x="70" y="120" text-anchor="middle" fill="white" font-size="12">Master's</text>
+    <text x="70" y="160" text-anchor="middle" fill="white" font-size="12">PhD</text>
+  </g>
+  
+  <!-- Online Learning Path -->
+  <g transform="translate(280, 100)">
+    <rect width="140" height="200" rx="10" fill="#818cf8" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Online Learning</text>
+    <text x="70" y="80" text-anchor="middle" fill="white" font-size="12">MOOCs</text>
+    <text x="70" y="120" text-anchor="middle" fill="white" font-size="12">Certifications</text>
+    <text x="70" y="160" text-anchor="middle" fill="white" font-size="12">Tutorial Sites</text>
+  </g>
+  
+  <!-- Bootcamps Path -->
+  <g transform="translate(460, 100)">
+    <rect width="140" height="200" rx="10" fill="#6366f1" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Bootcamps</text>
+    <text x="70" y="80" text-anchor="middle" fill="white" font-size="12">Full-time</text>
+    <text x="70" y="120" text-anchor="middle" fill="white" font-size="12">Part-time</text>
+    <text x="70" y="160" text-anchor="middle" fill="white" font-size="12">Specialized</text>
+  </g>
+  
+  <!-- Self-Study Path -->
+  <g transform="translate(640, 100)">
+    <rect width="140" height="200" rx="10" fill="#4f46e5" opacity="0.9"/>
+    <text x="70" y="40" text-anchor="middle" fill="white" font-size="16" font-weight="bold">Self-Study</text>
+    <text x="70" y="80" text-anchor="middle" fill="white" font-size="12">Books</text>
+    <text x="70" y="120" text-anchor="middle" fill="white" font-size="12">Projects</text>
+    <text x="70" y="160" text-anchor="middle" fill="white" font-size="12">Open Source</text>
+  </g>
+  
+  <!-- Timeline -->
+  <line x1="50" y1="350" x2="750" y2="350" stroke="#64748b" stroke-width="2"/>
+  <text x="400" y="380" text-anchor="middle" fill="#64748b" font-size="14">Time Investment →</text>
+</svg>

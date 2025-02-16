@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 400">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Main Path -->
+  <path d="M100,200 C200,100 300,300 400,200 S600,100 700,200" 
+        fill="none" 
+        stroke="#4a90e2" 
+        stroke-width="4"
+        stroke-linecap="round"/>
+  
+  <!-- Milestone Circles -->
+  <circle cx="100" cy="200" r="20" fill="#4a90e2"/>
+  <circle cx="300" cy="200" r="20" fill="#4a90e2"/>
+  <circle cx="500" cy="200" r="20" fill="#4a90e2"/>
+  <circle cx="700" cy="200" r="20" fill="#4a90e2"/>
+  
+  <!-- Level Titles -->
+  <text x="100" y="160" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#2c3e50">
+    <tspan>Entry</tspan>
+    <tspan x="100" dy="20">Level</tspan>
+  </text>
+  
+  <text x="300" y="260" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#2c3e50">
+    <tspan>Mid</tspan>
+    <tspan x="300" dy="20">Level</tspan>
+  </text>
+  
+  <text x="500" y="160" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#2c3e50">
+    <tspan>Senior</tspan>
+    <tspan x="500" dy="20">Level</tspan>
+  </text>
+  
+  <text x="700" y="260" text-anchor="middle" font-family="Arial" font-weight="bold" fill="#2c3e50">
+    <tspan>Expert</tspan>
+    <tspan x="700" dy="20">Level</tspan>
+  </text>
+  
+  <!-- Skills Labels -->
+  <text x="100" y="100" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">
+    <tspan>Core Skills</tspan>
+    <tspan x="100" dy="15">Basic Knowledge</tspan>
+  </text>
+  
+  <text x="300" y="320" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">
+    <tspan>Advanced Skills</tspan>
+    <tspan x="300" dy="15">Project Leadership</tspan>
+  </text>
+  
+  <text x="500" y="100" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">
+    <tspan>Strategic Thinking</tspan>
+    <tspan x="500" dy="15">Team Management</tspan>
+  </text>
+  
+  <text x="700" y="320" text-anchor="middle" font-family="Arial" font-size="12" fill="#666">
+    <tspan>Industry Authority</tspan>
+    <tspan x="700" dy="15">Vision Setting</tspan>
+  </text>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#2c3e50">
+    Career Progression Roadmap
+  </text>
+</svg>

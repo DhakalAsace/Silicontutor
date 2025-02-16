@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f8f9fa"/>
+    
+    <!-- Title -->
+    <text x="400" y="50" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#2c3e50">
+        ML Career Progression Map
+    </text>
+
+    <!-- Starting Point -->
+    <rect x="300" y="100" width="200" height="60" rx="10" fill="#3498db"/>
+    <text x="400" y="135" text-anchor="middle" font-family="Arial" font-size="16" fill="white">
+        Software Engineer
+        <tspan x="400" dy="20" font-size="14">$70k - $120k</tspan>
+    </text>
+
+    <!-- Paths and Specializations -->
+    <!-- ML Engineer Path -->
+    <path d="M400 160 L300 250" stroke="#34495e" stroke-width="2" fill="none"/>
+    <rect x="200" y="250" width="200" height="60" rx="10" fill="#2ecc71"/>
+    <text x="300" y="285" text-anchor="middle" font-family="Arial" font-size="16" fill="white">
+        ML Engineer
+        <tspan x="300" dy="20" font-size="14">$100k - $160k</tspan>
+    </text>
+
+    <!-- Data Scientist Path -->
+    <path d="M400 160 L500 250" stroke="#34495e" stroke-width="2" fill="none"/>
+    <rect x="400" y="250" width="200" height="60" rx="10" fill="#e74c3c"/>
+    <text x="500" y="285" text-anchor="middle" font-family="Arial" font-size="16" fill="white">
+        Data Scientist
+        <tspan x="500" dy="20" font-size="14">$90k - $150k</tspan>
+    </text>
+
+    <!-- Advanced Specializations -->
+    <path d="M300 310 L200 400" stroke="#34495e" stroke-width="2" fill="none"/>
+    <rect x="100" y="400" width="200" height="60" rx="10" fill="#9b59b6"/>
+    <text x="200" y="435" text-anchor="middle" font-family="Arial" font-size="16" fill="white">
+        ML Research Scientist
+        <tspan x="200" dy="20" font-size="14">$130k - $200k</tspan>
+    </text>
+
+    <path d="M500 310 L600 400" stroke="#34495e" stroke-width="2" fill="none"/>
+    <rect x="500" y="400" width="200" height="60" rx="10" fill="#f1c40f"/>
+    <text x="600" y="435" text-anchor="middle" font-family="Arial" font-size="16" fill="white">
+        AI Architect
+        <tspan x="600" dy="20" font-size="14">$140k - $220k</tspan>
+    </text>
+
+    <!-- Skills Labels -->
+    <text x="150" y="500" font-family="Arial" font-size="12" fill="#7f8c8d">
+        Required: PhD, Research
+        <tspan x="150" dy="20">Publications, Deep Learning</tspan>
+    </text>
+
+    <text x="650" y="500" font-family="Arial" font-size="12" fill="#7f8c8d">
+        Required: System Design
+        <tspan x="650" dy="20">MLOps, Leadership</tspan>
+    </text>
+</svg>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Central Hub -->
+  <circle cx="400" cy="300" r="80" fill="#4a90e2" opacity="0.9"/>
+  <text x="400" y="300" text-anchor="middle" fill="white" font-family="Arial" font-size="24">
+    <tspan x="400" dy="0">AI</tspan>
+    <tspan x="400" dy="25">Ecosystem</tspan>
+  </text>
+
+  <!-- Outer Circles -->
+  <g font-family="Arial" font-size="16">
+    <!-- Machine Learning -->
+    <circle cx="250" cy="180" r="60" fill="#34c759" opacity="0.8"/>
+    <text x="250" y="180" text-anchor="middle" fill="white">
+      <tspan x="250" dy="-5">Machine</tspan>
+      <tspan x="250" dy="20">Learning</tspan>
+    </text>
+    
+    <!-- Deep Learning -->
+    <circle cx="550" cy="180" r="60" fill="#ff9500" opacity="0.8"/>
+    <text x="550" y="180" text-anchor="middle" fill="white">
+      <tspan x="550" dy="-5">Deep</tspan>
+      <tspan x="550" dy="20">Learning</tspan>
+    </text>
+    
+    <!-- Cloud Platforms -->
+    <circle cx="250" cy="420" r="60" fill="#af52de" opacity="0.8"/>
+    <text x="250" y="420" text-anchor="middle" fill="white">
+      <tspan x="250" dy="-5">Cloud</tspan>
+      <tspan x="250" dy="20">Platforms</tspan>
+    </text>
+    
+    <!-- Development Tools -->
+    <circle cx="550" cy="420" r="60" fill="#ff3b30" opacity="0.8"/>
+    <text x="550" y="420" text-anchor="middle" fill="white">
+      <tspan x="550" dy="-5">Development</tspan>
+      <tspan x="550" dy="20">Tools</tspan>
+    </text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <g stroke="#cbd2d9" stroke-width="2">
+    <line x1="310" y1="220" x2="340" y2="260"/>
+    <line x1="490" y1="220" x2="460" y2="260"/>
+    <line x1="310" y1="380" x2="340" y2="340"/>
+    <line x1="490" y1="380" x2="460" y2="340"/>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="Arial" font-size="14" fill="#666">
+    <text x="250" y="120" text-anchor="middle">TensorFlow, scikit-learn</text>
+    <text x="550" y="120" text-anchor="middle">PyTorch, Keras</text>
+    <text x="250" y="480" text-anchor="middle">AWS, Azure, GCP</text>
+    <text x="550" y="480" text-anchor="middle">Jupyter, VS Code</text>
+  </g>
+</svg>

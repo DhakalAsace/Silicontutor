@@ -1,0 +1,34 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">Data Science Learning Stages</text>
+  
+  <!-- Stage 1: Foundation -->
+  <g transform="translate(100, 100)">
+    <rect width="600" height="100" rx="10" fill="#60a5fa" opacity="0.9"/>
+    <text x="300" y="35" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Stage 1: Foundation (Months 0-3)</text>
+    <text x="300" y="65" text-anchor="middle" fill="white" font-size="14">Mathematics • Programming • Basic Data Analysis</text>
+  </g>
+  
+  <!-- Stage 2: Core Concepts -->
+  <g transform="translate(100, 220)">
+    <rect width="600" height="100" rx="10" fill="#818cf8" opacity="0.9"/>
+    <text x="300" y="35" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Stage 2: Core Concepts (Months 3-6)</text>
+    <text x="300" y="65" text-anchor="middle" fill="white" font-size="14">Data Cleaning • EDA • Statistical Modeling • ML Basics</text>
+  </g>
+  
+  <!-- Stage 3: Advanced Topics -->
+  <g transform="translate(100, 340)">
+    <rect width="600" height="100" rx="10" fill="#6366f1" opacity="0.9"/>
+    <text x="300" y="35" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Stage 3: Advanced Topics (Months 6+)</text>
+    <text x="300" y="65" text-anchor="middle" fill="white" font-size="14">Deep Learning • Big Data • Specialization</text>
+  </g>
+  
+  <!-- Connecting Lines -->
+  <g stroke="#64748b" stroke-width="2">
+    <line x1="400" y1="200" x2="400" y2="220"/>
+    <line x1="400" y1="320" x2="400" y2="340"/>
+  </g>
+</svg>

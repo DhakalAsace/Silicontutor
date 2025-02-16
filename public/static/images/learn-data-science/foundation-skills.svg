@@ -1,0 +1,47 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">Foundation Skills for Data Science</text>
+  
+  <!-- Mathematics Section -->
+  <g transform="translate(100, 100)">
+    <rect width="250" height="200" rx="10" fill="#60a5fa" opacity="0.9"/>
+    <text x="125" y="40" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Mathematics</text>
+    <text x="125" y="80" text-anchor="middle" fill="white" font-size="14">Linear Algebra</text>
+    <text x="125" y="110" text-anchor="middle" fill="white" font-size="14">Calculus</text>
+    <text x="125" y="140" text-anchor="middle" fill="white" font-size="14">Probability</text>
+    <text x="125" y="170" text-anchor="middle" fill="white" font-size="14">Statistics</text>
+  </g>
+  
+  <!-- Programming Section -->
+  <g transform="translate(400, 100)">
+    <rect width="250" height="200" rx="10" fill="#818cf8" opacity="0.9"/>
+    <text x="125" y="40" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Programming</text>
+    <text x="125" y="80" text-anchor="middle" fill="white" font-size="14">Python</text>
+    <text x="125" y="110" text-anchor="middle" fill="white" font-size="14">R</text>
+    <text x="125" y="140" text-anchor="middle" fill="white" font-size="14">SQL</text>
+    <text x="125" y="170" text-anchor="middle" fill="white" font-size="14">Git</text>
+  </g>
+  
+  <!-- Data Analysis Section -->
+  <g transform="translate(100, 350)">
+    <rect width="250" height="200" rx="10" fill="#6366f1" opacity="0.9"/>
+    <text x="125" y="40" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Data Analysis</text>
+    <text x="125" y="80" text-anchor="middle" fill="white" font-size="14">Pandas</text>
+    <text x="125" y="110" text-anchor="middle" fill="white" font-size="14">NumPy</text>
+    <text x="125" y="140" text-anchor="middle" fill="white" font-size="14">Data Cleaning</text>
+    <text x="125" y="170" text-anchor="middle" fill="white" font-size="14">Visualization</text>
+  </g>
+  
+  <!-- Tools Section -->
+  <g transform="translate(400, 350)">
+    <rect width="250" height="200" rx="10" fill="#4f46e5" opacity="0.9"/>
+    <text x="125" y="40" text-anchor="middle" fill="white" font-size="18" font-weight="bold">Tools</text>
+    <text x="125" y="80" text-anchor="middle" fill="white" font-size="14">Jupyter Notebooks</text>
+    <text x="125" y="110" text-anchor="middle" fill="white" font-size="14">VS Code</text>
+    <text x="125" y="140" text-anchor="middle" fill="white" font-size="14">GitHub</text>
+    <text x="125" y="170" text-anchor="middle" fill="white" font-size="14">Command Line</text>
+  </g>
+</svg>

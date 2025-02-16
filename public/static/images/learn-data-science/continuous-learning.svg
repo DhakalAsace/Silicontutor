@@ -1,0 +1,39 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold">Continuous Learning Cycle</text>
+  
+  <!-- Center Circle -->
+  <circle cx="400" cy="200" r="40" fill="#2196F3"/>
+  <text x="400" y="205" text-anchor="middle" fill="white" font-size="14">Data</text>
+  <text x="400" y="225" text-anchor="middle" fill="white" font-size="14">Scientist</text>
+  
+  <!-- Circular Arrows -->
+  <path d="M 400 160 A 100 100 0 0 1 500 200" stroke="#4CAF50" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 500 200 A 100 100 0 0 1 400 300" stroke="#FF5722" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 400 300 A 100 100 0 0 1 300 200" stroke="#9C27B0" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  <path d="M 300 200 A 100 100 0 0 1 400 160" stroke="#FFC107" stroke-width="3" fill="none" marker-end="url(#arrow)"/>
+  
+  <!-- Arrow Marker -->
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5"
+      markerWidth="6" markerHeight="6" orient="auto">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#333"/>
+    </marker>
+  </defs>
+  
+  <!-- Labels -->
+  <text x="500" y="150" text-anchor="middle" font-size="14">Learn New</text>
+  <text x="500" y="170" text-anchor="middle" font-size="14">Technologies</text>
+  
+  <text x="550" y="250" text-anchor="middle" font-size="14">Apply in</text>
+  <text x="550" y="270" text-anchor="middle" font-size="14">Projects</text>
+  
+  <text x="250" y="250" text-anchor="middle" font-size="14">Share</text>
+  <text x="250" y="270" text-anchor="middle" font-size="14">Knowledge</text>
+  
+  <text x="300" y="150" text-anchor="middle" font-size="14">Stay Current</text>
+  <text x="300" y="170" text-anchor="middle" font-size="14">with Trends</text>
+</svg>

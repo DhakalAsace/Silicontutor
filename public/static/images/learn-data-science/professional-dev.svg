@@ -1,0 +1,37 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold">Professional Development Path</text>
+  
+  <!-- Steps as ascending blocks -->
+  <!-- Portfolio -->
+  <rect x="50" y="300" width="140" height="60" fill="#4CAF50" rx="10"/>
+  <text x="120" y="335" text-anchor="middle" fill="white" font-size="14">Portfolio</text>
+  
+  <!-- Online Presence -->
+  <rect x="200" y="250" width="140" height="110" fill="#2196F3" rx="10"/>
+  <text x="270" y="305" text-anchor="middle" fill="white" font-size="14">Online</text>
+  <text x="270" y="325" text-anchor="middle" fill="white" font-size="14">Presence</text>
+  
+  <!-- Networking -->
+  <rect x="350" y="200" width="140" height="160" fill="#9C27B0" rx="10"/>
+  <text x="420" y="280" text-anchor="middle" fill="white" font-size="14">Networking</text>
+  
+  <!-- Certifications -->
+  <rect x="500" y="150" width="140" height="210" fill="#FF5722" rx="10"/>
+  <text x="570" y="255" text-anchor="middle" fill="white" font-size="14">Certifications</text>
+  
+  <!-- Industry Experience -->
+  <rect x="650" y="100" width="140" height="260" fill="#FFC107" rx="10"/>
+  <text x="720" y="230" text-anchor="middle" fill="white" font-size="14">Industry</text>
+  <text x="720" y="250" text-anchor="middle" fill="white" font-size="14">Experience</text>
+  
+  <!-- Connecting Line -->
+  <path d="M 50 330 L 790 330" stroke="#ccc" stroke-width="2" stroke-dasharray="5,5"/>
+  
+  <!-- Labels -->
+  <text x="50" y="360" font-size="12">Beginning</text>
+  <text x="760" y="360" text-anchor="end" font-size="12">Professional</text>
+</svg>

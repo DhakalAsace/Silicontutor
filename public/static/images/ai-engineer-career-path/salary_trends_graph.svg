@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  
+  <!-- Grid lines -->
+  <g stroke="#e9ecef" stroke-width="1">
+    <line x1="100" y1="50" x2="100" y2="400" />
+    <line x1="100" y1="400" x2="700" y2="400" />
+    <line x1="100" y1="300" x2="700" y2="300" stroke-dasharray="4"/>
+    <line x1="100" y1="200" x2="700" y2="200" stroke-dasharray="4"/>
+    <line x1="100" y1="100" x2="700" y2="100" stroke-dasharray="4"/>
+  </g>
+
+  <!-- Salary lines -->
+  <g fill="none" stroke-width="3">
+    <path d="M100,350 Q250,330 400,200 T700,80" stroke="#4361ee"/>
+    <path d="M100,380 Q250,350 400,250 T700,150" stroke="#4cc9f0"/>
+    <path d="M100,360 Q250,340 400,280 T700,220" stroke="#7209b7"/>
+  </g>
+
+  <!-- Y-axis labels -->
+  <g fill="#495057" font-family="Arial" text-anchor="end">
+    <text x="90" y="405">$40k</text>
+    <text x="90" y="305">$80k</text>
+    <text x="90" y="205">$120k</text>
+    <text x="90" y="105">$160k</text>
+  </g>
+
+  <!-- X-axis labels -->
+  <g fill="#495057" font-family="Arial" text-anchor="middle">
+    <text x="100" y="430">Entry</text>
+    <text x="300" y="430">Mid</text>
+    <text x="500" y="430">Senior</text>
+    <text x="700" y="430">Lead</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(550,50)" font-family="Arial">
+    <circle cx="10" cy="10" r="6" fill="#4361ee"/>
+    <text x="25" y="15">Software Dev</text>
+    <circle cx="10" cy="35" r="6" fill="#4cc9f0"/>
+    <text x="25" y="40">Data Science</text>
+    <circle cx="10" cy="60" r="6" fill="#7209b7"/>
+    <text x="25" y="65">Design</text>
+  </g>
+
+  <!-- Title -->
+  <text x="400" y="40" font-family="Arial" font-size="24" font-weight="bold" text-anchor="middle" fill="#212529">
+    Salary Progression by Role
+  </text>
+</svg>

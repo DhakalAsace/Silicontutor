@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Arial" font-size="24" font-weight="bold" fill="#2c3e50">
+    Time Investment Calculator
+  </text>
+
+  <!-- Timeline Base -->
+  <line x1="100" y1="300" x2="700" y2="300" stroke="#cbd5e0" stroke-width="4"/>
+
+  <!-- Timeline Markers -->
+  <g font-family="Arial" font-size="14" fill="#718096">
+    <!-- Fast Track -->
+    <circle cx="250" cy="200" r="40" fill="#4299e1" opacity="0.9"/>
+    <text x="250" y="205" text-anchor="middle" fill="white">
+      20hrs/week
+    </text>
+    
+    <!-- Medium Track -->
+    <circle cx="400" cy="300" r="40" fill="#48bb78" opacity="0.9"/>
+    <text x="400" y="305" text-anchor="middle" fill="white">
+      10hrs/week
+    </text>
+    
+    <!-- Slow Track -->
+    <circle cx="550" cy="400" r="40" fill="#ed8936" opacity="0.9"/>
+    <text x="550" y="405" text-anchor="middle" fill="white">
+      5hrs/week
+    </text>
+  </g>
+
+  <!-- Timeline Labels -->
+  <g font-family="Arial" font-size="16" fill="#4a5568">
+    <text x="250" y="160" text-anchor="middle">
+      6 months
+    </text>
+    <text x="400" y="260" text-anchor="middle">
+      12 months
+    </text>
+    <text x="550" y="360" text-anchor="middle">
+      24 months
+    </text>
+  </g>
+
+  <!-- Connecting Lines -->
+  <g stroke="#cbd5e0" stroke-width="2" stroke-dasharray="4">
+    <line x1="250" y1="200" x2="250" y2="300"/>
+    <line x1="400" y1="300" x2="400" y2="300"/>
+    <line x1="550" y1="400" x2="550" y2="300"/>
+  </g>
+
+  <!-- Legend -->
+  <g font-family="Arial" font-size="14" transform="translate(100, 420)">
+    <text x="0" y="0" fill="#4a5568">Time Commitment Level:</text>
+    <rect x="0" y="10" width="15" height="15" fill="#4299e1"/>
+    <text x="25" y="22" fill="#4a5568">High</text>
+    <rect x="80" y="10" width="15" height="15" fill="#48bb78"/>
+    <text x="105" y="22" fill="#4a5568">Medium</text>
+    <rect x="160" y="10" width="15" height="15" fill="#ed8936"/>
+    <text x="185" y="22" fill="#4a5568">Low</text>
+  </g>
+</svg>

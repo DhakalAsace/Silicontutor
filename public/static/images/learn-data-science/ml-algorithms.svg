@@ -1,0 +1,45 @@
+<svg viewBox="0 0 800 500" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="500" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold">Machine Learning Algorithms</text>
+  
+  <!-- Supervised Learning Box -->
+  <rect x="50" y="100" width="300" height="350" rx="10" fill="#e3f2fd" stroke="#2196F3" stroke-width="2"/>
+  <text x="200" y="140" text-anchor="middle" font-size="18" fill="#1565c0">Supervised Learning</text>
+  
+  <!-- Classification -->
+  <rect x="70" y="160" width="260" height="130" rx="5" fill="#bbdefb"/>
+  <text x="200" y="180" text-anchor="middle" font-size="14">Classification</text>
+  <text x="80" y="200" font-size="12">• Logistic Regression</text>
+  <text x="80" y="220" font-size="12">• Decision Trees</text>
+  <text x="80" y="240" font-size="12">• Random Forests</text>
+  <text x="80" y="260" font-size="12">• Support Vector Machines</text>
+  
+  <!-- Regression -->
+  <rect x="70" y="300" width="260" height="130" rx="5" fill="#bbdefb"/>
+  <text x="200" y="320" text-anchor="middle" font-size="14">Regression</text>
+  <text x="80" y="340" font-size="12">• Linear Regression</text>
+  <text x="80" y="360" font-size="12">• Polynomial Regression</text>
+  <text x="80" y="380" font-size="12">• Ridge/Lasso Regression</text>
+  <text x="80" y="400" font-size="12">• Gradient Boosting</text>
+  
+  <!-- Unsupervised Learning Box -->
+  <rect x="450" y="100" width="300" height="350" rx="10" fill="#fce4ec" stroke="#e91e63" stroke-width="2"/>
+  <text x="600" y="140" text-anchor="middle" font-size="18" fill="#c2185b">Unsupervised Learning</text>
+  
+  <!-- Clustering -->
+  <rect x="470" y="160" width="260" height="130" rx="5" fill="#f8bbd0"/>
+  <text x="600" y="180" text-anchor="middle" font-size="14">Clustering</text>
+  <text x="480" y="200" font-size="12">• K-Means</text>
+  <text x="480" y="220" font-size="12">• Hierarchical Clustering</text>
+  <text x="480" y="240" font-size="12">• DBSCAN</text>
+  
+  <!-- Dimensionality Reduction -->
+  <rect x="470" y="300" width="260" height="130" rx="5" fill="#f8bbd0"/>
+  <text x="600" y="320" text-anchor="middle" font-size="14">Dimensionality Reduction</text>
+  <text x="480" y="340" font-size="12">• PCA</text>
+  <text x="480" y="360" font-size="12">• t-SNE</text>
+  <text x="480" y="380" font-size="12">• LDA</text>
+</svg>

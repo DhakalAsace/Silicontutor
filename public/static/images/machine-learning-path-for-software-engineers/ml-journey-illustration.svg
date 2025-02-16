@@ -1,0 +1,54 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8f9fa"/>
+  
+  <!-- Path/Timeline -->
+  <path d="M 100 200 C 250 200, 350 150, 500 200 C 650 250, 700 200, 700 200" 
+        stroke="#3b82f6" 
+        fill="none" 
+        stroke-width="4"
+        stroke-linecap="round"/>
+  
+  <!-- Stages/Milestones -->
+  <!-- Stage 1: Programming -->
+  <circle cx="150" cy="200" r="40" fill="#93c5fd" stroke="#2563eb" stroke-width="3"/>
+  <text x="150" y="205" text-anchor="middle" fill="#1e40af" font-size="24">{}</text>
+  
+  <!-- Stage 2: Math & Stats -->
+  <circle cx="350" cy="170" r="40" fill="#93c5fd" stroke="#2563eb" stroke-width="3"/>
+  <text x="350" y="175" text-anchor="middle" fill="#1e40af" font-size="24">∑</text>
+  
+  <!-- Stage 3: ML/AI -->
+  <circle cx="550" cy="200" r="40" fill="#93c5fd" stroke="#2563eb" stroke-width="3"/>
+  <text x="550" y="205" text-anchor="middle" fill="#1e40af" font-size="24">🧠</text>
+  
+  <!-- Stage 4: Advanced ML -->
+  <circle cx="700" cy="200" r="40" fill="#93c5fd" stroke="#2563eb" stroke-width="3"/>
+  <text x="700" y="205" text-anchor="middle" fill="#1e40af" font-size="24">🚀</text>
+  
+  <!-- Title -->
+  <text x="400" y="80" text-anchor="middle" font-size="28" fill="#1e40af" font-weight="bold">
+    Machine Learning for Software Engineers
+  </text>
+  
+  <!-- Subtitle -->
+  <text x="400" y="120" text-anchor="middle" font-size="20" fill="#3b82f6">
+    A 2025 Learning Journey
+  </text>
+  
+  <!-- Small Icons/Elements -->
+  <g transform="translate(200,300)">
+    <rect width="30" height="30" rx="5" fill="#bfdbfe"/>
+    <text x="15" y="20" text-anchor="middle" font-size="16">⚡</text>
+  </g>
+  
+  <g transform="translate(500,300)">
+    <rect width="30" height="30" rx="5" fill="#bfdbfe"/>
+    <text x="15" y="20" text-anchor="middle" font-size="16">📊</text>
+  </g>
+  
+  <!-- Decorative Elements -->
+  <circle cx="150" cy="100" r="15" fill="#dbeafe" opacity="0.5"/>
+  <circle cx="650" cy="100" r="15" fill="#dbeafe" opacity="0.5"/>
+  <circle cx="400" cy="300" r="15" fill="#dbeafe" opacity="0.5"/>
+</svg>

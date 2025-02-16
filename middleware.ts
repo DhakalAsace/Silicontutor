@@ -6,22 +6,16 @@ export function middleware(request: NextRequest) {
 
   // Check if the request is for a static asset
   const isStaticAsset = /\.(js|css|svg|jpg|png|woff|woff2|ttf|eot)$/.test(request.nextUrl.pathname)
-  
+
   // Add Vary header to ensure proper caching with different Accept headers
   response.headers.set('Vary', 'Accept-Encoding')
 
   // Set strict transport security
-  response.headers.set(
-    'Strict-Transport-Security',
-    'max-age=31536000; includeSubDomains; preload'
-  )
+  response.headers.set('Strict-Transport-Security', 'max-age=31536000; includeSubDomains; preload')
 
   // Cache static assets for 1 year
   if (isStaticAsset) {
-    response.headers.set(
-      'Cache-Control',
-      'public, max-age=31536000, immutable'
-    )
+    response.headers.set('Cache-Control', 'public, max-age=31536000, immutable')
   }
 
   return response
@@ -33,4 +27,4 @@ export const config = {
     // Match all static assets
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
-} 
+}

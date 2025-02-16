@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f8f9fa"/>
+    
+    <!-- Pyramid Levels -->
+    <path d="M100 500 L700 500 L600 400 L200 400 Z" fill="#e9ecef" stroke="#dee2e6"/>
+    <path d="M200 400 L600 400 L500 300 L300 300 Z" fill="#ced4da" stroke="#adb5bd"/>
+    <path d="M300 300 L500 300 L400 200 L400 200 Z" fill="#6c757d" stroke="#495057"/>
+    
+    <!-- Level 1 Text (Bottom) -->
+    <text x="400" y="470" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#212529">
+        <tspan x="400" dy="0">Foundation Skills</tspan>
+        <tspan x="400" dy="25" font-size="16">Programming • Mathematics • Algorithms</tspan>
+    </text>
+    
+    <!-- Level 2 Text (Middle) -->
+    <text x="400" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#212529">
+        <tspan x="400" dy="0">Core ML Concepts</tspan>
+        <tspan x="400" dy="25" font-size="16">Statistics • Data Processing • Model Design</tspan>
+    </text>
+    
+    <!-- Level 3 Text (Top) -->
+    <text x="400" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="20" fill="#ffffff">
+        <tspan x="400" dy="0">Advanced ML</tspan>
+        <tspan x="400" dy="25" font-size="16">Deep Learning • Neural Networks</tspan>
+    </text>
+    
+    <!-- Title -->
+    <text x="400" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="32" font-weight="bold" fill="#212529">
+        Skills Foundation Pyramid
+    </text>
+</svg>

@@ -1,0 +1,56 @@
+<svg viewBox="0 0 800 600" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8fafc"/>
+  
+  <!-- Central Circle -->
+  <circle cx="400" cy="300" r="100" fill="#818cf8" opacity="0.8"/>
+  <text x="400" y="300" text-anchor="middle" fill="white" font-size="24" font-weight="bold">Data Science</text>
+  
+  <!-- Component Circles -->
+  <!-- Mathematics -->
+  <g transform="translate(250, 150)">
+    <circle cx="0" cy="0" r="80" fill="#60a5fa" opacity="0.8"/>
+    <text x="0" y="0" text-anchor="middle" fill="white" font-size="16">Mathematics</text>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="12">Linear Algebra</text>
+    <text x="0" y="45" text-anchor="middle" fill="white" font-size="12">Calculus</text>
+    <text x="0" y="65" text-anchor="middle" fill="white" font-size="12">Probability</text>
+  </g>
+  
+  <!-- Statistics -->
+  <g transform="translate(550, 150)">
+    <circle cx="0" cy="0" r="80" fill="#6366f1" opacity="0.8"/>
+    <text x="0" y="0" text-anchor="middle" fill="white" font-size="16">Statistics</text>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="12">Hypothesis Testing</text>
+    <text x="0" y="45" text-anchor="middle" fill="white" font-size="12">Inference</text>
+    <text x="0" y="65" text-anchor="middle" fill="white" font-size="12">Modeling</text>
+  </g>
+  
+  <!-- Computer Science -->
+  <g transform="translate(250, 450)">
+    <circle cx="0" cy="0" r="80" fill="#4f46e5" opacity="0.8"/>
+    <text x="0" y="0" text-anchor="middle" fill="white" font-size="16">Computer Science</text>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="12">Programming</text>
+    <text x="0" y="45" text-anchor="middle" fill="white" font-size="12">Algorithms</text>
+    <text x="0" y="65" text-anchor="middle" fill="white" font-size="12">Databases</text>
+  </g>
+  
+  <!-- Domain Expertise -->
+  <g transform="translate(550, 450)">
+    <circle cx="0" cy="0" r="80" fill="#4338ca" opacity="0.8"/>
+    <text x="0" y="0" text-anchor="middle" fill="white" font-size="16">Domain Expertise</text>
+    <text x="0" y="25" text-anchor="middle" fill="white" font-size="12">Industry Knowledge</text>
+    <text x="0" y="45" text-anchor="middle" fill="white" font-size="12">Business Acumen</text>
+    <text x="0" y="65" text-anchor="middle" fill="white" font-size="12">Problem Solving</text>
+  </g>
+  
+  <!-- Connecting Lines -->
+  <g stroke="#64748b" stroke-width="2" opacity="0.4">
+    <line x1="300" y1="200" x2="370" y2="270"/>
+    <line x1="500" y1="200" x2="430" y2="270"/>
+    <line x1="300" y1="400" x2="370" y2="330"/>
+    <line x1="500" y1="400" x2="430" y2="330"/>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="24" font-weight="bold" fill="#1e293b">Data Science Components</text>
+</svg>

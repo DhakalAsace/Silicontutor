@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f8f9fa"/>
+    
+    <!-- Main Stack Container -->
+    <g transform="translate(400,50)">
+        <!-- Stack Levels -->
+        <rect x="-300" y="0" width="600" height="100" rx="10" fill="#7209b7" opacity="0.9"/>
+        <rect x="-300" y="120" width="600" height="100" rx="10" fill="#3a0ca3" opacity="0.9"/>
+        <rect x="-300" y="240" width="600" height="100" rx="10" fill="#4361ee" opacity="0.9"/>
+        <rect x="-300" y="360" width="600" height="100" rx="10" fill="#4cc9f0" opacity="0.9"/>
+        
+        <!-- Level Titles -->
+        <text x="-280" y="40" fill="white" font-family="Arial" font-size="24" font-weight="bold">
+            Applications
+            <tspan x="-280" dy="25" font-size="16">TensorFlow • PyTorch • Scikit-learn</tspan>
+        </text>
+        
+        <text x="-280" y="160" fill="white" font-family="Arial" font-size="24" font-weight="bold">
+            ML Frameworks
+            <tspan x="-280" dy="25" font-size="16">Keras • Fast.ai • XGBoost</tspan>
+        </text>
+        
+        <text x="-280" y="280" fill="white" font-family="Arial" font-size="24" font-weight="bold">
+            Data Processing
+            <tspan x="-280" dy="25" font-size="16">Pandas • NumPy • OpenCV</tspan>
+        </text>
+        
+        <text x="-280" y="400" fill="white" font-family="Arial" font-size="24" font-weight="bold">
+            Infrastructure
+            <tspan x="-280" dy="25" font-size="16">Python • CUDA • Cloud Services</tspan>
+        </text>
+        
+        <!-- Title -->
+        <text x="0" y="-20" fill="#2b2d42" font-family="Arial" font-size="32" font-weight="bold" text-anchor="middle">
+            ML Technology Stack
+        </text>
+    </g>
+    
+    <!-- Connection Lines -->
+    <g stroke="#dee2e6" stroke-width="2" opacity="0.5">
+        <line x1="100" y1="150" x2="100" y2="270"/>
+        <line x1="100" y1="270" x2="100" y2="390"/>
+        <line x1="100" y1="390" x2="100" y2="510"/>
+    </g>
+</svg>

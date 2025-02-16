@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Title -->
+  <text x="400" y="60" text-anchor="middle" font-family="Arial" font-size="32" font-weight="bold" fill="#2d3436">
+    ML Project Portfolio Builder
+  </text>
+
+  <!-- Project Cards -->
+  <!-- Beginner -->
+  <rect x="100" y="120" width="180" height="400" rx="10" fill="#74b9ff" fill-opacity="0.2"/>
+  <text x="190" y="160" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#0984e3">
+    Beginner
+  </text>
+  <text x="120" y="200" font-family="Arial" font-size="16" fill="#2d3436">
+    <tspan x="130" dy="0">✓ Image Classifier</tspan>
+    <tspan x="130" dy="30">✓ Linear Regression</tspan>
+    <tspan x="130" dy="30">✓ Sentiment Analysis</tspan>
+    <tspan x="130" dy="60" font-size="14" fill="#636e72">(2-3 weeks each)</tspan>
+  </text>
+
+  <!-- Intermediate -->
+  <rect x="310" y="120" width="180" height="400" rx="10" fill="#55efc4" fill-opacity="0.2"/>
+  <text x="400" y="160" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#00b894">
+    Intermediate
+  </text>
+  <text x="330" y="200" font-family="Arial" font-size="16" fill="#2d3436">
+    <tspan x="340" dy="0">✓ Recommendation System</tspan>
+    <tspan x="340" dy="30">✓ Time Series Forecast</tspan>
+    <tspan x="340" dy="30">✓ Object Detection</tspan>
+    <tspan x="340" dy="60" font-size="14" fill="#636e72">(3-4 weeks each)</tspan>
+  </text>
+
+  <!-- Advanced -->
+  <rect x="520" y="120" width="180" height="400" rx="10" fill="#ffeaa7" fill-opacity="0.2"/>
+  <text x="610" y="160" text-anchor="middle" font-family="Arial" font-size="20" font-weight="bold" fill="#fdcb6e">
+    Advanced
+  </text>
+  <text x="540" y="200" font-family="Arial" font-size="16" fill="#2d3436">
+    <tspan x="550" dy="0">✓ GANs Project</tspan>
+    <tspan x="550" dy="30">✓ NLP Transformer</tspan>
+    <tspan x="550" dy="30">✓ Reinforcement Learning</tspan>
+    <tspan x="550" dy="60" font-size="14" fill="#636e72">(4-6 weeks each)</tspan>
+  </text>
+
+  <!-- Footer Note -->
+  <text x="400" y="560" text-anchor="middle" font-family="Arial" font-size="14" fill="#636e72">
+    Build projects in sequence for optimal learning path
+  </text>
+</svg>

@@ -1,0 +1,86 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Gradient Background -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0" y1="0" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a237e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#311b92;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Circuit Pattern -->
+    <pattern id="circuit-pattern" x="0" y="0" width="100" height="100" patternUnits="userSpaceOnUse">
+      <path d="M10 10 L90 10 M50 10 L50 90 M10 50 L90 50" stroke="#ffffff" stroke-width="1" fill="none" opacity="0.1"/>
+      <circle cx="50" cy="50" r="3" fill="#ffffff" opacity="0.1"/>
+      <circle cx="10" cy="10" r="3" fill="#ffffff" opacity="0.1"/>
+      <circle cx="90" cy="90" r="3" fill="#ffffff" opacity="0.1"/>
+    </pattern>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)"/>
+  <rect width="1200" height="630" fill="url(#circuit-pattern)"/>
+
+  <!-- Main Content Container -->
+  <g transform="translate(100, 80)">
+    <!-- Title -->
+    <text x="500" y="60" fill="#ffffff" font-size="48" text-anchor="middle" font-weight="bold">
+      AI Engineer Career Path
+    </text>
+    <text x="500" y="100" fill="#a7b6ff" font-size="24" text-anchor="middle">
+      The Ultimate Guide 2025
+    </text>
+
+    <!-- Career Path Flow -->
+    <g transform="translate(0, 150)">
+      <!-- Connected Hexagons representing career stages -->
+      <path d="M100,100 L200,50 L300,100 L400,50 L500,100 L600,50 L700,100" 
+            stroke="#4dabf5" fill="none" stroke-width="3"/>
+      
+      <!-- Stage Hexagons -->
+      <g transform="translate(100,100)">
+        <path d="M-30,-20 L0,-40 L30,-20 L30,20 L0,40 L-30,20 Z" fill="#90caf9" opacity="0.9"/>
+        <text x="0" y="5" fill="#000000" font-size="12" text-anchor="middle">Foundation</text>
+      </g>
+
+      <g transform="translate(300,100)">
+        <path d="M-30,-20 L0,-40 L30,-20 L30,20 L0,40 L-30,20 Z" fill="#90caf9" opacity="0.9"/>
+        <text x="0" y="5" fill="#000000" font-size="12" text-anchor="middle">ML/AI</text>
+      </g>
+
+      <g transform="translate(500,100)">
+        <path d="M-30,-20 L0,-40 L30,-20 L30,20 L0,40 L-30,20 Z" fill="#90caf9" opacity="0.9"/>
+        <text x="0" y="5" fill="#000000" font-size="12" text-anchor="middle">Deep Learning</text>
+      </g>
+
+      <g transform="translate(700,100)">
+        <path d="M-30,-20 L0,-40 L30,-20 L30,20 L0,40 L-30,20 Z" fill="#90caf9" opacity="0.9"/>
+        <text x="0" y="5" fill="#000000" font-size="12" text-anchor="middle">Expert</text>
+      </g>
+    </g>
+
+    <!-- Tech Icons -->
+    <g transform="translate(50, 300)">
+      <!-- Python -->
+      <circle cx="100" cy="50" r="30" fill="#ffffff" opacity="0.9"/>
+      <text x="100" y="55" fill="#000000" font-size="24" text-anchor="middle">🐍</text>
+
+      <!-- TensorFlow -->
+      <circle cx="300" cy="50" r="30" fill="#ffffff" opacity="0.9"/>
+      <text x="300" y="55" fill="#000000" font-size="24" text-anchor="middle">📊</text>
+
+      <!-- Cloud -->
+      <circle cx="500" cy="50" r="30" fill="#ffffff" opacity="0.9"/>
+      <text x="500" y="55" fill="#000000" font-size="24" text-anchor="middle">☁️</text>
+
+      <!-- AI Brain -->
+      <circle cx="700" cy="50" r="30" fill="#ffffff" opacity="0.9"/>
+      <text x="700" y="55" fill="#000000" font-size="24" text-anchor="middle">🧠</text>
+    </g>
+
+    <!-- Decorative Elements -->
+    <g transform="translate(0, 400)">
+      <path d="M50,0 Q400,50 750,0" stroke="#64b5f6" fill="none" stroke-width="2" opacity="0.5"/>
+      <path d="M50,20 Q400,70 750,20" stroke="#64b5f6" fill="none" stroke-width="2" opacity="0.3"/>
+      <path d="M50,40 Q400,90 750,40" stroke="#64b5f6" fill="none" stroke-width="2" opacity="0.2"/>
+    </g>
+  </g>
+</svg>

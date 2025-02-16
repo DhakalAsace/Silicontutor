@@ -113,7 +113,7 @@ function createSearchIndex(allBlogs: ContentlayerDocument[]) {
       'public',
       siteMetadata.search.kbarConfig.searchDocumentsPath.replace(/^\//, '')
     )
-    
+
     // Ensure the directory exists
     const dir = path.dirname(searchIndexPath)
     if (!existsSync(dir)) {

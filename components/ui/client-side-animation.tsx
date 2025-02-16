@@ -4,20 +4,20 @@ import React, { useEffect, useState } from 'react'
 import dynamic from 'next/dynamic'
 
 // Lazy load Framer Motion components
-const MotionSpan = dynamic(() => 
-  import('framer-motion').then((mod) => {
-    const { motion } = mod
-    return motion.span
-  }),
+const MotionSpan = dynamic(
+  () =>
+    import('framer-motion').then((mod) => {
+      const { motion } = mod
+      return motion.span
+    }),
   { ssr: false }
 )
 
-const AnimatePresence = dynamic(() =>
-  import('framer-motion').then((mod) => mod.AnimatePresence),
-  { ssr: false }
-)
+const AnimatePresence = dynamic(() => import('framer-motion').then((mod) => mod.AnimatePresence), {
+  ssr: false,
+})
 
-const topics = ["Machine Learning", "Data Science", "AI Engineering"]
+const topics = ['Machine Learning', 'Data Science', 'AI Engineering']
 
 export function ClientSideAnimation() {
   const [currentTopicIndex, setCurrentTopicIndex] = useState(0)
@@ -38,7 +38,7 @@ export function ClientSideAnimation() {
 
   return (
     <div className="mt-6 flex flex-col items-center justify-center">
-      <div className="h-12 mt-2">
+      <div className="mt-2 h-12">
         <AnimatePresence mode="wait">
           <MotionSpan
             key={currentTopicIndex}
@@ -46,7 +46,7 @@ export function ClientSideAnimation() {
             animate={{ y: 0, opacity: 1 }}
             exit={{ y: -20, opacity: 0 }}
             transition={{ duration: 0.5 }}
-            className="text-2xl md:text-3xl font-semibold bg-gradient-to-r from-pink-600 to-rose-400 bg-clip-text text-transparent inline-block"
+            className="inline-block bg-gradient-to-r from-pink-600 to-rose-400 bg-clip-text text-2xl font-semibold text-transparent md:text-3xl"
           >
             {topics[currentTopicIndex]}
           </MotionSpan>
@@ -54,4 +54,4 @@ export function ClientSideAnimation() {
       </div>
     </div>
   )
-} 
+}

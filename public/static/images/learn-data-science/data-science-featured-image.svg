@@ -1,0 +1,172 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <!-- Background with gradient -->
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#051937;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f4c81;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- Abstract data pattern -->
+    <pattern id="data-pattern" patternUnits="userSpaceOnUse" width="100" height="100" patternTransform="scale(2) rotate(0)">
+      <circle cx="10" cy="10" r="1.5" fill="#ffffff" fill-opacity="0.3" />
+      <circle cx="30" cy="20" r="1" fill="#ffffff" fill-opacity="0.2" />
+      <circle cx="15" cy="40" r="1.2" fill="#ffffff" fill-opacity="0.25" />
+      <circle cx="40" cy="50" r="0.8" fill="#ffffff" fill-opacity="0.15" />
+      <circle cx="50" cy="30" r="1.1" fill="#ffffff" fill-opacity="0.2" />
+      <circle cx="70" cy="70" r="1.3" fill="#ffffff" fill-opacity="0.3" />
+      <circle cx="90" cy="40" r="0.9" fill="#ffffff" fill-opacity="0.25" />
+      <circle cx="60" cy="80" r="1" fill="#ffffff" fill-opacity="0.2" />
+      <circle cx="80" cy="15" r="1.2" fill="#ffffff" fill-opacity="0.25" />
+    </pattern>
+  </defs>
+  
+  <!-- Main background -->
+  <rect width="1200" height="630" fill="url(#bg-gradient)" />
+  
+  <!-- Data pattern overlay -->
+  <rect width="1200" height="630" fill="url(#data-pattern)" opacity="0.8" />
+  
+  <!-- Accent shapes -->
+  <circle cx="200" cy="500" r="300" fill="#4361ee" opacity="0.1" />
+  <circle cx="1000" cy="150" r="250" fill="#4cc9f0" opacity="0.1" />
+  
+  <!-- Central visualization elements -->
+  <!-- Neural network representation -->
+  <g transform="translate(600, 315) scale(0.9)">
+    <!-- Nodes -->
+    <!-- Input layer -->
+    <circle cx="-200" cy="-120" r="15" fill="#4cc9f0" />
+    <circle cx="-200" cy="-40" r="15" fill="#4cc9f0" />
+    <circle cx="-200" cy="40" r="15" fill="#4cc9f0" />
+    <circle cx="-200" cy="120" r="15" fill="#4cc9f0" />
+    
+    <!-- Hidden layer 1 -->
+    <circle cx="-100" cy="-150" r="15" fill="#4361ee" />
+    <circle cx="-100" cy="-90" r="15" fill="#4361ee" />
+    <circle cx="-100" cy="-30" r="15" fill="#4361ee" />
+    <circle cx="-100" cy="30" r="15" fill="#4361ee" />
+    <circle cx="-100" cy="90" r="15" fill="#4361ee" />
+    <circle cx="-100" cy="150" r="15" fill="#4361ee" />
+    
+    <!-- Hidden layer 2 -->
+    <circle cx="0" cy="-180" r="15" fill="#3a0ca3" />
+    <circle cx="0" cy="-108" r="15" fill="#3a0ca3" />
+    <circle cx="0" cy="-36" r="15" fill="#3a0ca3" />
+    <circle cx="0" cy="36" r="15" fill="#3a0ca3" />
+    <circle cx="0" cy="108" r="15" fill="#3a0ca3" />
+    <circle cx="0" cy="180" r="15" fill="#3a0ca3" />
+    
+    <!-- Hidden layer 3 -->
+    <circle cx="100" cy="-150" r="15" fill="#4361ee" />
+    <circle cx="100" cy="-90" r="15" fill="#4361ee" />
+    <circle cx="100" cy="-30" r="15" fill="#4361ee" />
+    <circle cx="100" cy="30" r="15" fill="#4361ee" />
+    <circle cx="100" cy="90" r="15" fill="#4361ee" />
+    <circle cx="100" cy="150" r="15" fill="#4361ee" />
+    
+    <!-- Output layer -->
+    <circle cx="200" cy="-80" r="15" fill="#4cc9f0" />
+    <circle cx="200" cy="0" r="15" fill="#4cc9f0" />
+    <circle cx="200" cy="80" r="15" fill="#4cc9f0" />
+    
+    <!-- Connections -->
+    <!-- Only draw some representative connections to avoid overcrowding -->
+    <g opacity="0.3">
+      <!-- Input to Hidden 1 connections -->
+      <line x1="-200" y1="-120" x2="-100" y2="-150" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-200" y1="-120" x2="-100" y2="-90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-200" y1="-40" x2="-100" y2="-90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-200" y1="-40" x2="-100" y2="-30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-200" y1="40" x2="-100" y2="30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-200" y1="40" x2="-100" y2="90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-200" y1="120" x2="-100" y2="90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-200" y1="120" x2="-100" y2="150" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Hidden 1 to Hidden 2 connections -->
+      <line x1="-100" y1="-150" x2="0" y2="-180" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="-150" x2="0" y2="-108" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="-90" x2="0" y2="-108" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="-90" x2="0" y2="-36" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="-30" x2="0" y2="-36" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="-30" x2="0" y2="36" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="30" x2="0" y2="36" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="30" x2="0" y2="108" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="90" x2="0" y2="108" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="90" x2="0" y2="180" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="-100" y1="150" x2="0" y2="180" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Hidden 2 to Hidden 3 connections -->
+      <line x1="0" y1="-180" x2="100" y2="-150" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="-108" x2="100" y2="-150" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="-108" x2="100" y2="-90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="-36" x2="100" y2="-90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="-36" x2="100" y2="-30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="36" x2="100" y2="-30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="36" x2="100" y2="30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="108" x2="100" y2="30" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="108" x2="100" y2="90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="180" x2="100" y2="90" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="0" y1="180" x2="100" y2="150" stroke="#ffffff" stroke-width="1.5" />
+      
+      <!-- Hidden 3 to Output connections -->
+      <line x1="100" y1="-150" x2="200" y2="-80" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="100" y1="-90" x2="200" y2="-80" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="100" y1="-30" x2="200" y2="-80" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="100" y1="-30" x2="200" y2="0" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="100" y1="30" x2="200" y2="0" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="100" y1="30" x2="200" y2="80" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="100" y1="90" x2="200" y2="80" stroke="#ffffff" stroke-width="1.5" />
+      <line x1="100" y1="150" x2="200" y2="80" stroke="#ffffff" stroke-width="1.5" />
+    </g>
+  </g>
+  
+  <!-- Title text -->
+  <g>
+    <text x="600" y="100" font-family="Arial, sans-serif" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">How to Learn Data Science in 2025</text>
+    <text x="600" y="160" font-family="Arial, sans-serif" font-size="28" fill="#ffffff" text-anchor="middle" opacity="0.9">The Ultimate Guide to Mastering Data Skills</text>
+  </g>
+  
+  <!-- Data icons at the bottom -->
+  <g transform="translate(185, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#4cc9f0" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">Py</text>
+  </g>
+  
+  <g transform="translate(300, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#4361ee" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">R</text>
+  </g>
+  
+  <g transform="translate(415, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#3a0ca3" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">SQL</text>
+  </g>
+  
+  <g transform="translate(530, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#7209b7" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">ML</text>
+  </g>
+  
+  <g transform="translate(645, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#f72585" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" fill="#ffffff" text-anchor="middle">AI</text>
+  </g>
+  
+  <g transform="translate(760, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#4cc9f0" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle">📊</text>
+  </g>
+  
+  <g transform="translate(875, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#4361ee" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle">📈</text>
+  </g>
+  
+  <g transform="translate(990, 500)">
+    <rect x="0" y="0" width="40" height="40" rx="5" fill="#3a0ca3" />
+    <text x="20" y="25" font-family="Arial, sans-serif" font-size="20" fill="#ffffff" text-anchor="middle">🧠</text>
+  </g>
+  
+  <!-- Silicontutor logo text -->
+  <text x="600" y="580" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="#ffffff" text-anchor="middle">silicontutor.com</text>
+</svg>

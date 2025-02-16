@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+  <!-- Background -->
+  <rect width="800" height="600" fill="#f8f9fa"/>
+  
+  <!-- Pyramid Levels -->
+  <path d="M100 500 L700 500 L400 100 Z" fill="#e9ecef" stroke="#dee2e6" stroke-width="2"/>
+  <path d="M150 500 L650 500 L400 150 Z" fill="#ced4da" stroke="#dee2e6" stroke-width="2"/>
+  <path d="M200 500 L600 500 L400 200 Z" fill="#adb5bd" stroke="#dee2e6" stroke-width="2"/>
+  
+  <!-- Level Labels -->
+  <g font-family="Arial, sans-serif">
+    <!-- Advanced Level -->
+    <text x="400" y="180" text-anchor="middle" fill="#495057" font-size="20" font-weight="bold">
+      Advanced Skills
+    </text>
+    <text x="400" y="210" text-anchor="middle" fill="#495057" font-size="14">
+      <tspan x="400" dy="0">MLOps</tspan>
+      <tspan x="400" dy="20">Advanced Algorithms</tspan>
+      <tspan x="400" dy="20">Research &amp; Innovation</tspan>
+    </text>
+    
+    <!-- Intermediate Level -->
+    <text x="400" y="300" text-anchor="middle" fill="#495057" font-size="20" font-weight="bold">
+      Intermediate Skills
+    </text>
+    <text x="400" y="330" text-anchor="middle" fill="#495057" font-size="14">
+      <tspan x="400" dy="0">Machine Learning</tspan>
+      <tspan x="400" dy="20">Deep Learning</tspan>
+      <tspan x="400" dy="20">Data Engineering</tspan>
+    </text>
+    
+    <!-- Foundation Level -->
+    <text x="400" y="420" text-anchor="middle" fill="#495057" font-size="20" font-weight="bold">
+      Foundation Skills
+    </text>
+    <text x="400" y="450" text-anchor="middle" fill="#495057" font-size="14">
+      <tspan x="400" dy="0">Programming</tspan>
+      <tspan x="400" dy="20">Mathematics &amp; Statistics</tspan>
+      <tspan x="400" dy="20">Software Engineering</tspan>
+    </text>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" fill="#212529" font-size="24" font-weight="bold" font-family="Arial, sans-serif">
+    AI Engineer Skills Hierarchy
+  </text>
+</svg>

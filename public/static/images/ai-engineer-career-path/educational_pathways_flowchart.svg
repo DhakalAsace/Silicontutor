@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600">
+    <!-- Background -->
+    <rect width="800" height="600" fill="#f8f9fa"/>
+    
+    <!-- Start Point -->
+    <circle cx="400" cy="50" r="30" fill="#6c63ff"/>
+    <text x="400" y="55" text-anchor="middle" fill="white" font-family="Arial" font-size="14">START</text>
+    
+    <!-- Main Paths -->
+    <g stroke="#333" stroke-width="2" fill="none">
+        <path d="M400 80 L400 120"/>
+        <path d="M400 120 L200 200"/>
+        <path d="M400 120 L400 200"/>
+        <path d="M400 120 L600 200"/>
+    </g>
+
+    <!-- Path Boxes -->
+    <!-- Formal Education -->
+    <rect x="100" y="180" width="200" height="80" rx="10" fill="#4CAF50" opacity="0.9"/>
+    <text x="200" y="215" text-anchor="middle" fill="white" font-family="Arial" font-size="16">Formal Education
+        <tspan x="200" dy="20" font-size="12">University Degree (4+ years)</tspan>
+    </text>
+
+    <!-- Bootcamp -->
+    <rect x="300" y="180" width="200" height="80" rx="10" fill="#FF5722" opacity="0.9"/>
+    <text x="400" y="215" text-anchor="middle" fill="white" font-family="Arial" font-size="16">Bootcamp
+        <tspan x="400" dy="20" font-size="12">Intensive Training (3-6 months)</tspan>
+    </text>
+
+    <!-- Self-Learning -->
+    <rect x="500" y="180" width="200" height="80" rx="10" fill="#2196F3" opacity="0.9"/>
+    <text x="600" y="215" text-anchor="middle" fill="white" font-family="Arial" font-size="16">Self-Learning
+        <tspan x="600" dy="20" font-size="12">Online Resources + Projects</tspan>
+    </text>
+
+    <!-- Outcome Arrows -->
+    <g stroke="#333" stroke-width="2" fill="none">
+        <path d="M200 260 L400 400"/>
+        <path d="M400 260 L400 400"/>
+        <path d="M600 260 L400 400"/>
+    </g>
+
+    <!-- Final Destination -->
+    <rect x="300" y="400" width="200" height="80" rx="10" fill="#6c63ff"/>
+    <text x="400" y="435" text-anchor="middle" fill="white" font-family="Arial" font-size="16">AI Engineer
+        <tspan x="400" dy="20" font-size="12">Career Ready</tspan>
+    </text>
+
+    <!-- Legend -->
+    <g transform="translate(50, 520)">
+        <text x="0" y="0" font-family="Arial" font-size="12" fill="#666">Time Investment:</text>
+        <circle cx="20" cy="20" r="8" fill="#4CAF50"/>
+        <text x="35" y="25" font-family="Arial" font-size="12" fill="#666">Long</text>
+        <circle cx="90" cy="20" r="8" fill="#FF5722"/>
+        <text x="105" y="25" font-family="Arial" font-size="12" fill="#666">Medium</text>
+        <circle cx="170" cy="20" r="8" fill="#2196F3"/>
+        <text x="185" y="25" font-family="Arial" font-size="12" fill="#666">Flexible</text>
+    </g>
+</svg>

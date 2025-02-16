@@ -1,0 +1,51 @@
+<svg viewBox="0 0 800 400" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="800" height="400" fill="#f8fafc"/>
+  
+  <!-- Process Steps -->
+  <g transform="translate(50, 50)">
+    <!-- Step 1: Problem Definition -->
+    <circle cx="100" cy="150" r="40" fill="#60a5fa" opacity="0.9"/>
+    <text x="100" y="150" text-anchor="middle" fill="white" font-size="12">Problem Definition</text>
+    
+    <!-- Step 2: Data Collection -->
+    <circle cx="220" cy="150" r="40" fill="#818cf8" opacity="0.9"/>
+    <text x="220" y="150" text-anchor="middle" fill="white" font-size="12">Data Collection</text>
+    
+    <!-- Step 3: Data Cleaning -->
+    <circle cx="340" cy="150" r="40" fill="#6366f1" opacity="0.9"/>
+    <text x="340" y="150" text-anchor="middle" fill="white" font-size="12">Data Cleaning</text>
+    
+    <!-- Step 4: EDA -->
+    <circle cx="460" cy="150" r="40" fill="#4f46e5" opacity="0.9"/>
+    <text x="460" y="150" text-anchor="middle" fill="white" font-size="12">EDA</text>
+    
+    <!-- Step 5: Modeling -->
+    <circle cx="580" cy="150" r="40" fill="#4338ca" opacity="0.9"/>
+    <text x="580" y="150" text-anchor="middle" fill="white" font-size="12">Modeling</text>
+    
+    <!-- Step 6: Evaluation -->
+    <circle cx="700" cy="150" r="40" fill="#3730a3" opacity="0.9"/>
+    <text x="700" y="150" text-anchor="middle" fill="white" font-size="12">Evaluation</text>
+    
+    <!-- Connecting Arrows -->
+    <path d="M140 150 L180 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M260 150 L300 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M380 150 L420 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M500 150 L540 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    <path d="M620 150 L660 150" stroke="#64748b" stroke-width="2" marker-end="url(#arrowhead)"/>
+    
+    <!-- Feedback Loop -->
+    <path d="M700 190 Q 400 300 100 190" stroke="#64748b" stroke-width="2" fill="none" marker-end="url(#arrowhead)"/>
+    
+    <!-- Arrow Marker Definition -->
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#64748b"/>
+      </marker>
+    </defs>
+  </g>
+  
+  <!-- Title -->
+  <text x="400" y="50" text-anchor="middle" font-size="20" font-weight="bold" fill="#1e293b">Data Science Workflow</text>
+</svg>
