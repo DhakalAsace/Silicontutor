@@ -5,7 +5,9 @@ export function middleware(request: NextRequest) {
   const response = NextResponse.next()
 
   // Check if the request is for a static asset
-  const isStaticAsset = /\.(js|css|svg|jpg|png|woff|woff2|ttf|eot)$/.test(request.nextUrl.pathname)
+  const isStaticAsset = /\.(js|css|svg|jpg|png|woff|woff2|ttf|eot|ico)$/.test(
+    request.nextUrl.pathname
+  )
 
   // Add Vary header to ensure proper caching with different Accept headers
   response.headers.set('Vary', 'Accept-Encoding')
@@ -24,7 +26,7 @@ export function middleware(request: NextRequest) {
 // Configure to match specific paths
 export const config = {
   matcher: [
-    // Match all static assets
+    // Match all paths except specific ones
     '/((?!api|_next/static|_next/image|favicon.ico).*)',
   ],
 }
